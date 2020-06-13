@@ -50,4 +50,4 @@ $ npm init -y
 $ npm start
 ```
 
-Made by Diego Bito [Get in touch!](https://www.linkedin.com/in/diego-brito-3265b4188/)
+Made by Diego Brito [Get in touch!](https://www.linkedin.com/in/diego-brito-3265b4188/)

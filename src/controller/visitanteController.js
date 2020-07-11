@@ -21,7 +21,8 @@ module.exports = {
             function afterInsertData(err){
                 if(err){
                     console.log(err);
-                    return response.send("Erro no cadastro");
+
+                    return response.render("partials/erro.html");
                 }
                 console.log("Cadastrado com sucesso");
                 console.log(this);

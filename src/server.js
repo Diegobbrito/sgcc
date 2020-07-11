@@ -3,6 +3,7 @@ const server = express();
 const VisitanteController = require('./controller/visitanteController');
 const EmpresaController = require('./controller/empresaController');
 const CustoController = require('./controller/custosController');
+const EstacionamentoController = require('./controller/estacionamentoController');
 
 
 
@@ -42,10 +43,7 @@ server.get("/create-cost", CustoController.cadastro);
 server.post("/save-cost", CustoController.postCadastro);
 server.get("/search-cost", CustoController.getCustos);  
 
-server.get("/estacionamento", (request, response) => {
-
-    return response.render("estacionamento.html")
-});
+server.get("/estacionamento", EstacionamentoController.getEstacionamento);
 
 
 //Inicia o servidor

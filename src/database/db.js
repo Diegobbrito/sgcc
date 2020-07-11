@@ -26,8 +26,7 @@ db.serialize(()=>{
     //         cnpj TEXT UNIQUE,
     //         telefone TEXT,
     //         andar INTEGER,
-    //         sala INTEGER
-            
+    //         sala INTEGER 
     //     );    
     //  `);
     //  db.run(`

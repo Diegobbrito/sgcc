@@ -4,33 +4,42 @@ const sqlite3 = require("sqlite3").verbose();
 const db = new sqlite3.Database("./src/database/database.db");
 
 //Utilizando o objeto de banco de dados
-// db.serialize(()=>{
-//Criando a tabela
+db.serialize(()=>{
+// //Criando a tabela
+    // db.run('DROP TABLE visitante');
+    // db.run('DROP TABLE empresas');
+    // db.run('DROP TABLE custos');
+
     // db.run(`
-    //     CREATE TABLE IF NOT EXISTS places(
+    //     CREATE TABLE IF NOT EXISTS visitante (
     //         id INTEGER PRIMARY KEY AUTOINCREMENT,
     //         name TEXT,
-    //         image TEXT,
-    //         address TEXT,
-    //         address2 TEXT,
-    //         state TEXT,
-    //         city TEXT,
-    //         items TEXT
-    //     );
-    
+    //         cpf TEXT UNIQUE,
+    //         telefone TEXT
+    //     );    
+    // //  `);
+    // db.run(`
+    //     CREATE TABLE IF NOT EXISTS empresas (
+    //         id INTEGER PRIMARY KEY AUTOINCREMENT,
+    //         name TEXT,
+    //         type TEXT,
+    //         cnpj TEXT UNIQUE,
+    //         telefone TEXT,
+    //         andar INTEGER,
+    //         sala INTEGER
+            
+    //     );    
+    //  `);
+    //  db.run(`
+    //     CREATE TABLE IF NOT EXISTS custos (
+    //         id INTEGER PRIMARY KEY AUTOINCREMENT,
+    //         type TEXT,
+    //         valor DOUBLE,
+    //         mes INTEGER,
+    //         ano INTEGER
+    //     );    
     //  `);
 //Inserir dados na tabela
-// const query = `
-//         INSERT INTO places(
-//             name,
-//             image,
-//             address,
-//             address2,
-//             state,
-//             city,
-//             items
-//         ) VALUES (?,?,?,?,?,?,?);
-// `;
 
 // const values = [ 
 //     "",
@@ -67,6 +76,6 @@ const db = new sqlite3.Database("./src/database/database.db");
 //     console.log("Registro deletado com sucesso");
 // });
 
-// });
+});
 
 module.exports = db;

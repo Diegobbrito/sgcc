@@ -15,27 +15,28 @@
     <main>
     {% if total > 0 %}
         <h2>
-            <strong>{{total}} visitantes</strong>
+            <strong>{{total}} Empresas</strong>
             encontrados
         </h2>
         <div class="visitantes">
         <table border="1">
         <tr>
-           <th><h1>Nome</h1></th>  
-           <th><h1>Cpf</h1> </th>
-           <th><h1>Telefone</h1> </th>
-        </tr>
-        {% for visitante in visitantes %}      
-               <tr>
-                <td> <h3>{{ visitante.name }}</h3></td>
-                
-                <td> <h3>{{ visitante.cpf }}</h3></td>
-                <td> <h3>{{ visitante.telefone }}</h3></td>
+           <th><h1>Nome</h1></th> 
+           <th><h1>Cnpj</h1> </th>
+           <th><h1>Sala</h1> </th>
 
+        </tr>
+        {% for empresa in empresas %}      
+               <tr>
+                <td> <h3>{{ empresa.name }}</h3></td>
+                <td> <h3>{{ empresa.cnpj }}</h3></td>
+                <td> <h3>{{ empresa.sala }}</h3></td>
+                <td> <h3>{{ empresa.valor }}</h3></td>
+                
                </tr>
         {% endfor %}
         {% else %}
-        <h4><strong>Nenhum</strong> visitante encontrado</h4>
+        <h4><strong>Nenhuma</strong> empresa encontrado</h4>
     {% endif %}
         </table>
         </div>

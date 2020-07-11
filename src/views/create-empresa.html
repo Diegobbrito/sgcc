@@ -1,0 +1,68 @@
+{% extends "partials/layout.html" %}}
+
+{% set pageId = "page-create-visitante" %}
+{% block title %}
+    <title>Criar empresa</title>
+{% endblock title %}
+{% block styles %}
+    <link rel="stylesheet" href="/styles/create-visitante.css">
+{% endblock styles %}
+
+{% block content %}
+    {% include "partials/page-header.html" %}
+     <form action="/saveempresa" method="POST">{# Alteração do metodo padrao get para post #}
+        <h1>Cadastro</h1>
+
+        <fieldset>
+            <legend>
+                <h2>Dados da empresa</h2>
+            </legend>
+            <div class="field-group">
+                <div class="field">
+                    <label for="">Nome da empresa</label>
+                    <input type="text" name="name" required="required">
+                </div>
+                <div class="field">
+                    <label for="">Tipo</label>
+                    <select type="text" name="type" required="required" >
+                        <option value="Locador">Locador</option>
+                        <option value="Locatario">Locatario</option>
+                    </select>
+                </div>
+                 
+            </div>
+            <div class="field-group">
+                <div class="field">
+                    <label for="">CNPJ</label>
+                    <input type="text" name="cnpj" required="required">
+                </div>   
+                <div class="field">
+                    <label for="">Telefone</label>
+                    <input type="text" name="telefone" required="required">
+                </div>
+                
+            </div>
+            <div class="field-group">
+                <div class="field">
+                    <label for="">Andar</label>
+                    <input type="number" name="andar" required="required">
+                </div>   
+                <div class="field">
+                    <label for="">Sala</label>
+                    <input type="number" name="sala" required="required">
+                </div>
+                
+            </div>
+        </fieldset>
+
+        <button type="submit">Cadastrar Empresa</button>
+
+    </form>
+{% endblock content%}
+
+    {% block modal %}
+        {% if saved %}
+            {%include "partials/visitante-cadastrado.html"%}
+        {% endif %}
+    {% endblock modal %}
+    

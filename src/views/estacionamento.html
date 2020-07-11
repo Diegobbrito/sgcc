@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Estacionamento</title>
+    <link rel="stylesheet" href="/styles/main.css">
+	<link rel="stylesheet" type="text/css" href="styles/estacionamento.css">
+	<meta charset="utf-8">
+</head>
+<body onload="mostraPatio()">
+<div class="container">
+	{% include "partials/page-header.html" %}
+	
+
+	<form id="formulario">
+			<h1>Estacionamento</h1>
+
+			<fieldset>
+				<legend>
+					<h2>Dados do veiculo</h2>
+				</legend>
+				<div class="field-group">
+					<div class="field">
+						<label>Modelo do Veículo</label>
+					<input type="text" class="form-control" name="" id="modeloVeiculo" placeholder="Digite o modelo do veiculo...">
+					</div>
+					<div class="field">
+						<label>	Placa do Veículo</label>
+						<input type="text" class="form-control" name="" id="placaVeiculo" placeholder="Digite a placa do veiculo...">
+					</div>
+					
+		
+				</div>
+				<button type="submit" class="btn btn-primary">Adicionar</button>
+			</fieldset>
+
+	</form>
+</div>
+
+
+
+	<div class="container">
+		<div class="items-grid">
+		 <table class="table-hover" >
+		    <thead>
+		      <tr>
+		        <th>Modelo</th>
+		        <th>Placa</th>
+		        <th>Entrada</th>
+		        <th>Finalizar</th>
+		      </tr>
+		    </thead>
+		    <tbody id="resultados">
+		    </tbody>
+		 </table>
+		</div>
+	</div>
+</div>
+        <script src="scritps/estacionamento.js"></script>
+	</body>
+</html>

@@ -1,24 +1,23 @@
-#page-create-point{
+#page-create-visitante{
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
 }
-#page-create-point header{
+#page-create-visitante header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 48px;
 }
 
-#page-create-point header a{
+#page-create-visitante header a{
     color: var(--title-color);
     font-weight: bold;
     display: flex;
     align-items: center;
 }
-#page-create-point header a span{
+#page-create-visitante header a span{
     margin-right: 16px;
-    background-image: url('../assets/arrow-left.svg');
     display: flex;
 
     width: 20px;
@@ -145,21 +144,3 @@ form button:hover{
     cursor: pointer;
 }
 
-.items-grid li span{
-    margin-top: 12px;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    color: var(--title-color);
-
-}
-
-.items-grid li.selected{
-    background: #e1faec;
-    border: 2px solid #34cb79;
-}
-
-.items-grid li img,
-.items-grid li span{
-    pointer-events: none;
-}

@@ -1,0 +1,73 @@
+{% extends "partials/layout.html" %}}
+
+{% set pageId = "page-create-visitante" %}
+{% block title %}
+    <title>Criar Custos</title>
+{% endblock title %}
+{% block styles %}
+    <link rel="stylesheet" href="/styles/create-visitante.css">
+{% endblock styles %}
+
+{% block content %}
+    {% include "partials/page-header.html" %}
+     <form action="/save-cost" method="POST">{# Alteração do metodo padrao get para post #}
+        <h1>Cadastro</h1>
+
+        <fieldset>
+            <legend>
+                <h2>Dados da despesa</h2>
+            </legend>
+            <div class="field-group">
+                <div class="field">
+                    <label for="">Tipo</label>
+                    <select type="text" name="type" required="required" >
+                        <option value="Agua">Agua</option>
+                        <option value="Energia">Energia</option>
+                        <option value="Funcionarios">Funcionarios</option>
+                        <option value="Manutenções">Manutenções</option>
+                        <option value="Materiais">Materiais</option>
+                    </select>
+                </div>
+                 
+                <div class="field">
+                    <label for="">Valor</label>
+                    <input type="number" name="valor" required="required" min="1" >
+                </div>   
+            </div>    
+        <div class="field-group">
+                <div class="field">
+                    <label for="">Mes</label>
+                    <select type="text" name="mes" required="required" >
+                        <option value="1">Janeiro</option>
+                        <option value="2">Fevereito</option>
+                        <option value="3">Março</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Maio</option>
+                        <option value="6">Junho</option>
+                        <option value="7">Julho</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Setembro</option>
+                        <option value="10">Outubro</option>
+                        <option value="11">Novembro</option>
+                        <option value="12">Dezembro</option>
+                    </select>
+                </div>
+                 
+                <div class="field">
+                    <label for="">Ano</label>
+                    <input type="number" name="ano" required="required" min="2020" >
+                </div>   
+            </div>    
+        </fieldset>
+
+        <button type="submit">Cadastrar Despesa</button>
+
+    </form>
+{% endblock content%}
+
+    {% block modal %}
+        {% if saved %}
+            {%include "partials/visitante-cadastrado.html"%}
+        {% endif %}
+    {% endblock modal %}
+    

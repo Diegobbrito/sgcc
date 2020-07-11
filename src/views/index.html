@@ -1,37 +1,34 @@
-{% extends "partials/layout.html" %}
-
 {% set pageId = "page-home" %}
 
  <title>Ecoleta</title>
     {% block styles %}
         <link rel="stylesheet" href="/styles/home.css">
-        <link rel="stylesheet" href="/styles/modal.css">
     {% endblock styles %}
     {% block content %}
         <div class="content">
-            <header>
-                <a href="/">
-                    <img src="./assets/logo.svg" alt="Logomarca" />
-                </a>
-                <a href="create-point">
-                    <span></span>
-                    Ecoleta Cadastre um ponto de colota</a>
-            </header>
+
             <main>
-                <h1>Seu marketplace de coleta de resíduo</h1>
-                
-                <p> Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</p>
-                
-                <a href="#"><span></span> <strong>Pesquisar pontos de coleta</strong></a>
+                <h1>Sistema Gerenciador de Condominio</h1>
+                <a href="/create-visitante">
+                   <strong> Cadastro de Visitante</strong>
+                </a>
+                <a href="/create-empresa">
+                   <strong> Cadastro de Empresa</strong>
+                </a>
+                <a href="/create-cost">
+                   <strong> Cadastro de Despesa</strong>
+                </a>
+                <a href="/search">
+                    <strong>Listar Visitantes</strong>
+                </a>
+                <a href="/search-empresas">
+                    <strong>Listar Empresas</strong>
+                </a>
+                <a href="/estacionamento">
+                    <strong>Estacionamento</strong>
+                </a>
             </main>
         
         
         </div>
     {% endblock content %}
-
-    {% block modal %}
-        {% include "partials/modal.html" %}
-    {% endblock modal %}
-    {% block script %}
-        <script src="/scritps/index.js"></script>
-    {% endblock script %}

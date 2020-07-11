@@ -1,0 +1,50 @@
+{% extends "partials/layout.html" %}}
+
+{% set pageId = "page-create-visitante" %}
+{% block title %}
+    <title>Criar visitante</title>
+{% endblock title %}
+{% block styles %}
+    <link rel="stylesheet" href="/styles/create-visitante.css">
+{% endblock styles %}
+
+{% block content %}
+    {% include "partials/page-header.html" %}
+     <form action="/save-visitante" method="POST">{# Alteração do metodo padrao get para post #}
+        <h1>Cadastro</h1>
+
+        <fieldset>
+            <legend>
+                <h2>Dados do visitante</h2>
+            </legend>
+            <div class="field-group">
+                <div class="field">
+                    <label for="">Nome</label>
+                    <input type="text" name="name" required="required">
+                </div>
+                 
+            </div>
+            <div class="field-group">
+                <div class="field">
+                    <label for="">CPF</label>
+                    <input type="number" name="cpf" required="required" min="10000000000" max="99999999999">
+                </div>   
+                <div class="field">
+                    <label for="">Telefone</label>
+                    <input type="text" name="telefone" required="required">
+                </div>
+                
+            </div>
+        </fieldset>
+
+        <button type="submit">Cadastrar Visitante</button>
+
+    </form>
+{% endblock content%}
+
+    {% block modal %}
+        {% if saved %}
+            {%include "partials/visitante-cadastrado.html"%}
+        {% endif %}
+    {% endblock modal %}
+    

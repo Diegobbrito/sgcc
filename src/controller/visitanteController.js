@@ -32,19 +32,19 @@ module.exports = {
     },
     getVisitantes: function(request, response){
         const search = request.query.search;
-    if(search ==""){
-        return response.render("search-results.html", {total: 0});
-    }
-
-    //Pegando os dados do banco 
-    db.all(`SELECT * FROM visitante`, function (err, rows){
-        if(err){
-            return console.log(err)
+        if(search ==""){
+            return response.render("search-results.html", {total: 0});
         }
-        const total = rows.length
-        //Mostrar a pag html com os dados do banco
-        return response.render("search-results.html", {visitantes: rows, total});
-    });
+
+        //Pegando os dados do banco 
+        db.all(`SELECT * FROM visitante`, function (err, rows){
+            if(err){
+                return console.log(err)
+            }
+            const total = rows.length
+            //Mostrar a pag html com os dados do banco
+            return response.render("search-results.html", {visitantes: rows, total});
+        });
     }
 }
 

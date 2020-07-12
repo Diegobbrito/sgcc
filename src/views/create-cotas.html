@@ -2,7 +2,7 @@
 
 {% set pageId = "page-create-visitante" %}
 {% block title %}
-    <title>Criar Custos</title>
+    <title>Gerar Cotas</title>
 {% endblock title %}
 {% block styles %}
     <link rel="stylesheet" href="/styles/create-visitante.css">
@@ -10,30 +10,14 @@
 
 {% block content %}
     {% include "partials/page-header.html" %}
-     <form action="/save-cost" method="POST">{# Alteração do metodo padrao get para post #}
-        <h1>Cadastro</h1>
+     <form action="/cotas-save" method="POST">{# Alteração do metodo padrao get para post #}
+        <h1>Cotas</h1>
 
         <fieldset>
             <legend>
-                <h2>Dados da despesa</h2>
+                <h2>Selecione o mes e ano para gerar as cotas</h2>
             </legend>
-            <div class="field-group">
-                <div class="field">
-                    <label for="">Tipo</label>
-                    <select type="text" name="type" required="required" >
-                        <option value="Agua">Agua</option>
-                        <option value="Energia">Energia</option>
-                        <option value="Funcionarios">Funcionarios</option>
-                        <option value="Manutenções">Manutenções</option>
-                        <option value="Materiais">Materiais</option>
-                    </select>
-                </div>
-                 
-                <div class="field">
-                    <label for="">Valor</label>
-                    <input type="number" name="valor" required="required" min="1" >
-                </div>   
-            </div>    
+          
         <div class="field-group">
                 <div class="field">
                     <label for="">Mes</label>
@@ -64,7 +48,7 @@
             </div>    
         </fieldset>
 
-        <button type="submit">Cadastrar Despesa</button>
+        <button type="submit">Gerar Cotas</button>
 
     </form>
 {% endblock content%}

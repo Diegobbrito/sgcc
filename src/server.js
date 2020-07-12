@@ -4,6 +4,7 @@ const VisitanteController = require('./controller/visitanteController');
 const EmpresaController = require('./controller/empresaController');
 const CustoController = require('./controller/custosController');
 const EstacionamentoController = require('./controller/estacionamentoController');
+const CotasController = require('./controller/CotasController');
 
 
 
@@ -41,9 +42,11 @@ server.get("/search-empresas", EmpresaController.getEmpresas)
 
 server.get("/create-cost", CustoController.cadastro);
 server.post("/save-cost", CustoController.postCadastro);
-server.get("/search-cost", CustoController.getCustos);  
 
 server.get("/estacionamento", EstacionamentoController.getEstacionamento);
+
+server.get("/cotas", CotasController.getGenerate);
+server.post("/cotas-save", CotasController.custos);
 
 
 //Inicia o servidor

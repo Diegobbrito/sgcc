@@ -30,10 +30,8 @@ module.exports = {
             return response.render("create-cost.html", { saved: true});
         }
             db.run(query, values, afterInsertData);
-    },
-        getCustos: function(request,response){
-            
-        }
+    }
+      
 }
 
 

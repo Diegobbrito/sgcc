@@ -2,7 +2,7 @@ const db = require("./../database/db");
 
 module.exports = {
     cadastro : function(request, response) {
-        return response.render("create-empresa.html")
+        return response.render("create-empresa.html");
     },
     postCadastro : function (request, response){
         const query = `

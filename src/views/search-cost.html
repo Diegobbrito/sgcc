@@ -13,32 +13,35 @@
 {% block content %}
     {% include "partials/page-header.html" %}
     <main>
-    {% if total > 0 %}
+
         <h2>
-            <strong>{{total}} Empresas</strong>
-            encontrados
+            <strong>{{total}} Cotas </strong>
+            Geradas
         </h2>
         <div class="visitantes">
         <table border="1">
         <tr>
-           <th><h1>Nome</h1></th> 
-           <th><h1>Cnpj</h1> </th>
-           <th><h1>Sala</h1> </th>
+           <th><h1>Total de Locatarios</h1></th> 
+           <th><h1>Despesas no mes</h1> </th>
+           <th><h1>Valor por Cota</h1> </th>
 
         </tr>
-        {% for empresa in empresas %}      
+        
                <tr>
-                <td> <h3>{{ empresa.name }}</h3></td>
-                <td> <h3>{{ empresa.cnpj }}</h3></td>
-                <td> <h3>{{ empresa.sala }}</h3></td>
-                <td> <h3>{{ empresa.valor }}</h3></td>
+                <td> <h3>{{ resultados.calculo.locador }}</h3></td>
+                <td> <h3>R$ {{ resultados.calculo.gastos }}</h3></td>
+                <td> <h3>R$ {{ resultados.calculo.cotas }}</h3></td>
+                
                 
                </tr>
-        {% endfor %}
-        {% else %}
-        <h4><strong>Nenhuma</strong> empresa encontrado</h4>
-    {% endif %}
+
         </table>
         </div>
     </main>
+    {# <script>
+    alert()
+    setTimeout(()=>{
+    window.location = "/create-visitante"
+    }, 1000);
+</script> #}
 {% endblock content%}

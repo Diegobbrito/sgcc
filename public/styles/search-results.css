@@ -57,8 +57,13 @@ main .visitantes{
 main .visitantes h1{
     margin: auto;
 }
+
 table h1, h3{
-    margin-left: 60px;
-    margin-right: 60px;
+    flex: 1;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px; 
     align-items: center;
+    justify-content: center;
 }

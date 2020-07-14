@@ -42,7 +42,7 @@ module.exports = {
         }
 
     //Pegando os dados do banco 
-        db.all(`SELECT * FROM empresas`, function (err, rows){
+        db.all(`SELECT * FROM empresas ORDER BY sala`, function (err, rows){
             if(err){
                 return console.log(err)
             }

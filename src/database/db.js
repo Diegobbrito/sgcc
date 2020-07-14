@@ -23,7 +23,7 @@ db.serialize(()=>{
     //         id INTEGER PRIMARY KEY AUTOINCREMENT,
     //         name TEXT,
     //         type TEXT,
-    //         cnpj TEXT UNIQUE,
+    //         cnpj TEXT,
     //         telefone TEXT,
     //         andar INTEGER,
     //         sala INTEGER 
@@ -68,7 +68,7 @@ db.serialize(()=>{
 // });
 
 //deletar daddos
-// db.run(`DELETE FROM places WHERE id - ?`, [5], function (err){
+// db.run(`DELETE FROM empresas WHERE id = ?`, [11], function (err){
 //     if(err){
 //         return console.log(err)
 //     }
